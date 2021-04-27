@@ -23,7 +23,7 @@ pipeline {
 			}
 		stage ('Four') {
 			steps {
-					package lsi;
+					
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
