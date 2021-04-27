@@ -22,24 +22,12 @@ pipeline {
 				}
 			}
 		stage ('Four') {
-			parallel {
-				stage ('Unit Test') {
+			stage ('Unit Test') {
 					steps {
 						echo "Running unit test"
 						}
 					}
-				stage ('Integration test') {
-					agent {
-						docker {
-							reuseNode false
-							image 'ubuntu'
-							}
-						}
-					steps {
-						echo "Running integration test"
-						}
-					}
-				}
+			
 			}
 		}
 	}
